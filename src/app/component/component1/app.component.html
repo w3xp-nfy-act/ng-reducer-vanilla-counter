@@ -1,0 +1,13 @@
+<h1>Example of a model for central state management</h1>
+<h2>
+  First Component: {{ title }}
+</h2>
+<div class="counter">
+  <span>{{ counter$ | async }}</span>
+</div>
+<button (click)="increment()">
+  Increment once
+</button>
+
+<nfy-root-2nd></nfy-root-2nd>
+<nfy-root-3rd></nfy-root-3rd>
