@@ -4,7 +4,7 @@ import {map } from 'rxjs/operators';
 @Component({
   selector: 'app-first',
   template: `
-    <h2>{{ title }} works!</h2>
+    <h3>{{ title }} works!</h3>
     <div class="counter">
       <span>{{ counter$ | async }}</span>
     </div>

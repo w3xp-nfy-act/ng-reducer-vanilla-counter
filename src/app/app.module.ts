@@ -4,15 +4,22 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { IncrementComponent, DecrementComponent, ResetComponent } from './totalizator';
 
+import { AppMarkdownComponent, } from './app-md.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { MarkdownModule } from 'ngx-markdown';
+
 @NgModule({
   declarations: [
     AppComponent,
     IncrementComponent,
     DecrementComponent,
-    ResetComponent
+    ResetComponent,
+    AppMarkdownComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   providers: [],
   bootstrap: [AppComponent]
