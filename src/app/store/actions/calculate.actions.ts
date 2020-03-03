@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import {TotalizatorState} from '../model';
-
+import {ICalculateState} from '..';
 
 @Injectable({ providedIn: 'root' })
-export class CalculateService {
+export class CalculateActions {
 
-  calculateState(state: TotalizatorState, message: string): TotalizatorState {
+  calculateState(state: ICalculateState, message: string): ICalculateState {
     switch (message) {
       case 'INCREMENT': {
         return {

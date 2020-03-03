@@ -1,18 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent1, AppComponent2, AppComponent3 } from './component';
+import { AppComponent } from './app.component';
+import { IncrementComponent, DecrementComponent, ResetComponent } from './totalizator';
 
 @NgModule({
   declarations: [
-    AppComponent1,
-    AppComponent2,
-    AppComponent3
+    AppComponent,
+    IncrementComponent,
+    DecrementComponent,
+    ResetComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent1]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,15 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { CalculateService } from './state-calculate.service';
+import { CalculateActions } from '../actions/calculate.actions';
 import { startWith, scan, shareReplay } from 'rxjs/operators';
 
-export interface MyState {
-  counter: number;
-  anotherProperty: string;
-}
-
 @Injectable({ providedIn: 'root' })
-export class StateReduceService {
+export class CalculateReduceService {
 
   private messages$ = new Subject<string>();
 
@@ -18,7 +13,7 @@ export class StateReduceService {
     anotherProperty: ' foobar '
   };
 
-  constructor(private calculateStateService: CalculateService) { }
+  constructor(private calculateStateService: CalculateActions) { }
 
   state$ = this.messages$.pipe(
     startWith('INIT'),
